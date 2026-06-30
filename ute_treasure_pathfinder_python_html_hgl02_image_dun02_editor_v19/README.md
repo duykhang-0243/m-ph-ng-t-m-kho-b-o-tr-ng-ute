@@ -11,6 +11,7 @@ Mã LHP: ARIN330585_08
 GVHD: TS. Phan Thị Huyền Trang
 
 SVTH: Thái Nhựt Huy
+      Ngô Duy Khang
 
 Đề Tài:XÂY DỰNG CHƯƠNG TRÌNH MÔ PHỎNG TRỰC QUAN
 
