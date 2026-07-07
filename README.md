@@ -113,8 +113,8 @@ Kết quả trả về giao diện
 | `app.py` | Khởi chạy server, cung cấp API và điều phối các module mô phỏng |
 | `graph_data.py` | Lưu dữ liệu bản đồ, node, edge, tọa độ và checkpoint |
 | `search_algorithms.py` | Cài đặt các thuật toán tìm kiếm trên bản đồ chính |
-| Frontend HTML/CSS/JS | Hiển thị bản đồ, control panel, route, animation và kết quả |
-| Dungeon modules | Xử lý các màn chơi phụ như DUN02, HGL02, FB04 và Final Boss |
+| `templates/index.html`, `static/css/style.css`, `static/js/app.js` | Hiển thị bản đồ, control panel, route, animation và kết quả |
+| `static/assets/` | Lưu ảnh bản đồ chính, hầm ngục phụ và màn Final Boss |
 
 ---
 
@@ -200,7 +200,7 @@ python3 --version
 Di chuyển vào thư mục chứa project:
 
 ```bash
-cd ute_treasure_pathfinder
+cd UTE_TREASURE_PATHFINDER_IDS_FAST_MOVE_FIX/ute_treasure_pathfinder_python_html_hgl02_image_dun02_editor_v19
 ```
 
 Chạy server:
@@ -288,34 +288,60 @@ Từ kết quả thực nghiệm, có thể rút ra một số nhận xét:
 
 ---
 
-## 15. Cấu trúc thư mục tham khảo
+## 15. Cấu trúc thư mục dự án
 
-Cấu trúc project có thể được tổ chức như sau:
+Cấu trúc thư mục hiện tại của project được tổ chức theo mô hình Flask/Python backend kết hợp frontend tĩnh trong thư mục `static` và giao diện HTML trong thư mục `templates`:
 
 ```text
-UTE_Treasure_Pathfinder_AI/
-│
-├── app.py
-├── graph_data.py
-├── search_algorithms.py
-│
-├── index.html
-├── style.css
-├── script.js
-│
-├── assets/
-│   ├── images/
-│   ├── maps/
-│   └── animations/
-│
-├── modules/
-│   ├── dun02.py
-│   ├── hgl02.py
-│   ├── fb04.py
-│   └── final_boss.py
-│
-└── README.md
+UTE_TREASURE_PATHFINDER_IDS_FAST_MOVE_FIX/
+└── ute_treasure_pathfinder_python_html_hgl02_image_dun02_editor_v19/
+    │
+    ├── app.py
+    ├── graph_data.py
+    ├── search_algorithms.py
+    ├── requirements.txt
+    ├── README.md
+    │
+    ├── static/
+    │   ├── assets/
+    │   │   ├── boss_arena_map.png
+    │   │   ├── dun02_dungeon_map.png
+    │   │   ├── fb04_belief_dungeon_map.png
+    │   │   ├── hgl02_belief_dungeon_map.png
+    │   │   └── ute_fantasy_map.png
+    │   │
+    │   ├── css/
+    │   │   └── style.css
+    │   │
+    │   └── js/
+    │       └── app.js
+    │
+    ├── templates/
+    │   └── index.html
+    │
+    └── __pycache__/
+        └── Các file cache tự sinh khi chạy Python
 ```
+
+### Mô tả các thành phần chính
+
+| Thành phần | Vai trò |
+|---|---|
+| `app.py` | File chạy chính của chương trình, khởi tạo server và xử lý các API mô phỏng thuật toán |
+| `graph_data.py` | Lưu dữ liệu bản đồ, danh sách node, cạnh, tọa độ và checkpoint bắt buộc |
+| `search_algorithms.py` | Cài đặt các thuật toán tìm kiếm như BFS, DFS, IDS, UCS, Greedy, A*, Beam Search, Hill Climbing và Simulated Annealing |
+| `requirements.txt` | Liệt kê các thư viện cần cài đặt trước khi chạy chương trình |
+| `templates/index.html` | Giao diện HTML chính của chương trình |
+| `static/css/style.css` | File định dạng giao diện, bố cục, màu sắc và hiệu ứng hiển thị |
+| `static/js/app.js` | Xử lý tương tác phía client, gọi API, hiển thị route và điều khiển animation |
+| `static/assets/ute_fantasy_map.png` | Ảnh bản đồ chính UTE dùng trong mô phỏng |
+| `static/assets/dun02_dungeon_map.png` | Ảnh bản đồ hầm DUN02 |
+| `static/assets/hgl02_belief_dungeon_map.png` | Ảnh bản đồ hầm HGL02 |
+| `static/assets/fb04_belief_dungeon_map.png` | Ảnh bản đồ hầm FB04 |
+| `static/assets/boss_arena_map.png` | Ảnh bản đồ màn Final Boss |
+| `__pycache__/` | Thư mục cache tự động do Python tạo ra, không cần chỉnh sửa thủ công |
+
+> Ghi chú: Thư mục `__pycache__` không phải mã nguồn chính. Khi đưa project lên GitHub, có thể thêm `__pycache__/` vào `.gitignore` để repository gọn hơn.
 
 ---
 
