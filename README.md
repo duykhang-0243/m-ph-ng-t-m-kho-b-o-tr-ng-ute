@@ -293,8 +293,8 @@ Từ kết quả thực nghiệm, có thể rút ra một số nhận xét:
 Cấu trúc thư mục hiện tại của project được tổ chức theo mô hình Flask/Python backend kết hợp frontend tĩnh trong thư mục `static` và giao diện HTML trong thư mục `templates`:
 
 ```text
-UTE_TREASURE_PATHFINDER_IDS_FAST_MOVE_FIX/
-└── ute_treasure_pathfinder_python_html_hgl02_image_dun02_editor_v19/
+UTE_TREASURE_PATHFINDER/
+└── ute_treasure_pathfinder_python_html/
     │
     ├── app.py
     ├── graph_data.py
