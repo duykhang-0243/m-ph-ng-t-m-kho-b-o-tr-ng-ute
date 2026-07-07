@@ -370,23 +370,6 @@ Trong tương lai, dự án có thể mở rộng thêm:
 
 ---
 
-## 18. Tác giả
-
-| Họ và tên | MSSV |
-|---|---|
-| Thái Nhựt Huy | 24110227 |
-| Ngô Duy Khang | 24110243 |
-
----
-
-## 19. Giảng viên hướng dẫn
-
-**TS. Phan Thị Huyền Trang**
-
----
-
-<div align="center">
-
 **UTE Treasure Pathfinder AI**  
 *AI không chỉ tính toán đường đi, mà còn giúp người học nhìn thấy cách máy ra quyết định.*
 
